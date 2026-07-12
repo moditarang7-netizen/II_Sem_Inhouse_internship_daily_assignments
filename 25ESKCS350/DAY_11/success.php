@@ -1,16 +1,15 @@
 <?php
-include ("header.php");
-?>
 
-<div class="container mt-5 text-center">
-    <div class="alert alert-success">
-        <h3>Registration Successful!</h3>
-        <p>Your form has been submitted successfully.</p>
-    </div>
+$host = "localhost";
+$user = "root";
+$password = "123";
+$database = "industrial_training";
 
-    <a href="registration.php" class = "btn btn-primary">Go Back</a>
-</div>
+$conn = mysqli_connect($host, $user, $password,$database);
 
-<?php
-include("fotter.php");
+    if (!$conn) {
+    die("Connection Failed: " . mysqli_connect_error());
+    }
+
+ echo "Connection Successful! <br>";
 ?>
